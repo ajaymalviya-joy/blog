@@ -1,1 +1,12 @@
-<?php echo"<h1>Hello ApexPlanet Internship</h1>"?>
+<?php 
+session_start();
+
+if(isset($_SESSION['username']))
+{
+
+    header("Location:dashboard.php");
+}else{
+    header("Location:login.php");
+}
+exit();
+?>
